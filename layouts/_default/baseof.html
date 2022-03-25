@@ -4,6 +4,9 @@
     {{ if .Site.Params.GoogleAnalyticsID }}
     {{ partial "analytics-gtag.html" . }}
     {{ end }}
+    {{ if .Site.Params.GoogleAdsenseID }}
+    {{ partial "adsense.html" . }}
+    {{ end }}
     <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 
     {{ partial "head.html" . }}
